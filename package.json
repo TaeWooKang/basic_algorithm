@@ -1,0 +1,19 @@
+{
+  "name": "default_algorithm",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TaeWooKang/default_algorithm.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TaeWooKang/default_algorithm/issues"
+  },
+  "homepage": "https://github.com/TaeWooKang/default_algorithm#readme"
+}
