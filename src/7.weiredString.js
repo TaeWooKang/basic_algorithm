@@ -3,28 +3,23 @@
 function getWeiredString (sentence) {
   let tempSentence = ""
   let tempIndex = 0
-  if (sentence) {
-    for (let char of sentence) {
-      if (char === " ") {
-        tempSentence = tempSentence + char
-        tempIndex = 0
+  for (let char of sentence) {
+    if (char === " ") {
+      tempSentence = tempSentence + char
+      tempIndex = 0
+    } else {
+      if (tempIndex % 2 === 0) {
+        tempSentence = tempSentence + char.toUpperCase()
       } else {
-        if (tempIndex % 2 === 0) {
-          tempSentence = tempSentence + char.toUpperCase()
-        } else {
-          tempSentence = tempSentence + char.toLowerCase()
-        }
-        tempIndex++
+        tempSentence = tempSentence + char.toLowerCase()
       }
+      tempIndex++
     }
   }
   return tempSentence
 }
 
 const items = [
-  "",//=> ""
-  null,//=> ""
-  undefined,//=> ""
   "String",//=> returns "StRiNg"
   "Weird string case" //=> returns "WeIrD StRiNg CaSe"
 ];
