@@ -3,11 +3,13 @@
 function findTheOddInt (numList) {
   let tempObject = {}
   for (const num of numList) {
-    tempObject[num] = tempObject[num] ? tempObject[num] + 1 : 1
+    if (tempObject[num]) {
+      delete tempObject[num]
+    } else {
+      tempObject[num] = true
+    }
   }
-  return Object.keys(tempObject).filter(key => {
-    return tempObject[key] % 2 === 1
-  })[0]
+  return Object.keys(tempObject)[0]
 }
 
 const items = [
