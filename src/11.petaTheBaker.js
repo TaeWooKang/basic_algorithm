@@ -4,7 +4,7 @@ function getCakeCount (recipe, ingredient) {
   let count = 0
   for (const key of Object.keys(recipe)) {
     const availCount = parseInt(ingredient[key] / recipe[key]) || 0
-    count = count < availCount && count || availCount
+    count = count < availCount ? count : availCount
 
     if (count === 0) {
       break;
