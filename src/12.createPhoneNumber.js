@@ -1,4 +1,4 @@
-//문제: https://im-developer.tistory.com/41?category=831367
+//문제: https://im-developer.tistory.com/42?category=831367
 
 function createPhoneNumber (numberList) {
   // 14.5ms
