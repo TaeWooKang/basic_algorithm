@@ -1,17 +1,17 @@
 //문제: https://im-developer.tistory.com/43?category=831367
 
 function didIFinishMySudoku (numberList) {
-  const length = numberList[0].length
+  const arrayLength = numberList[0].length
   const tempHrizon = {}
   const tempVertical = {}
 
-  for (let i = 0; i < length - 1; i++) {
+  for (let i = 0; i < arrayLength; i++) {
     tempHrizon[i] = {}
     tempVertical[i] = {}
   }
 
-  for (i = 0; i < length - 1; i++) {
-    for (let j = 0; j < length - 1; j++) {
+  for (i = 0; i < arrayLength; i++) {
+    for (let j = 0; j < arrayLength; j++) {
       let tempNum = numberList[i][j]
       // 1. 가로
       if (tempHrizon[i][tempNum]) {
