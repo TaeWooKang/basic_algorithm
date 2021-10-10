@@ -1,9 +1,13 @@
 //문제: https://im-developer.tistory.com/44?category=831367
 
 function helpTheBookseller (bookData) {
-  const { L, M } = bookData
+  const { L = [], M = [] } = bookData
   const tempObject = {}
   let result = ""
+
+  if (L.length === 0 || M.length === 0) {
+    return result
+  }
 
   M.forEach(element => {
     tempObject[element] = 0
@@ -35,7 +39,15 @@ const items = [
   {
     L: ["ABART 20", "ADXEF 0", "BKWRK 15", "BTSQZ 44", "DRTYM 2"],
     M: ["A", "B", "C", "D", "E", "W"]
-  } // => (A : 20) - (B : 59) - (C : 0) - (D : 2) - (E : 0) - (W : 0)
+  }, // => (A : 20) - (B : 59) - (C : 0) - (D : 2) - (E : 0) - (W : 0)
+  {
+    L: ["ABART 20", "ADXEF 0", "BKWRK 15", "BTSQZ 44", "DRTYM 2"],
+    M: []
+  }, // => ""
+  {
+    L: [],
+    M: ["A", "B", "C", "D", "E", "W"]
+  } // => ""
 ]
 console.time("#1")
 for (let item of items) {
