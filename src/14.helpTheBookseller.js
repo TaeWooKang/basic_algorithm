@@ -9,19 +9,23 @@ function helpTheBookseller (bookData) {
     return result
   }
 
+  // 1.대문자 리스트 리스트업
   M.forEach(element => {
     tempObject[element] = 0
   });
+
+  // 2.리스트업한 데이터 더히기
   L.forEach(element => {
     const nameAndValueArray = element.split(" ")
     const name = nameAndValueArray[0]
     const value = nameAndValueArray[1]
     const key = name.charAt(0)
-    if (M.includes(key)) {
+    if (tempObject[key] !== undefined) {
       tempObject[key] = tempObject[key] + Number(value)
     }
   })
 
+  // 3.데이터를 문자화하기
   M.forEach((element, index, array) => {
     result = result + `(${element} : ${tempObject[element]})`
     if (array[index + 1]) {
