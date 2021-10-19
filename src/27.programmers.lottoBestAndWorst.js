@@ -13,17 +13,16 @@ function lottoBestAndWorst (lottos, win_nums) {
     if (winNumsObj[num]) {
       answer[0]--
       answer[1]--
-    }
-    // best
-    if (num === 0) {
+    } else if (num === 0) {
+      // best
       answer[0]--
     }
   }
 
   // worst
-  answer[1] = answer[1] >= 6 ? 6 : answer[1]
+  answer[1] = answer[1] > 6 && 6 || answer[1]
   // best
-  answer[0] = answer[0] >= 6 ? 6 : answer[0]
+  answer[0] = answer[0] > 6 && 6 || answer[0]
 
   return answer;
 }
