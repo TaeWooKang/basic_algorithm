@@ -1,4 +1,4 @@
-//문제: https://programmers.co.kr/learn/courses/30/lessons/12982
+//문제: https://programmers.co.kr/learn/courses/30/lessons/12901
 
 function twoThousandSixteen (a, b) {
   return ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"][new Date(`2016-${a}-${b}`).getDay()]
