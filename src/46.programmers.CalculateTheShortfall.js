@@ -1,6 +1,6 @@
 //문제: https://programmers.co.kr/learn/courses/30/lessons/87389
 
-function CalculateTheShortfall (price, money, count) {
+function calculateTheShortfall (price, money, count) {
   let answer = money;
   for (let i = 1; i <= count; i++) {
     answer -= price * i
@@ -14,7 +14,7 @@ const items = [
 ]
 console.time("#1")
 for (let item of items) {
-  console.log(CalculateTheShortfall(item[0], item[1], item[2])
+  console.log(calculateTheShortfall(item[0], item[1], item[2])
   );
 }
 console.timeEnd("#1")
