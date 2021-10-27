@@ -36,6 +36,13 @@ const items = [
   "abcabcdede", // =>	8
   "abcabcabcabcdededededede", // =>	14
   "xababcdcdababcdcd", // =>	17
+  "xxxxxxxxxxyyy", // => 5
+  "a", // => 1
+  "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx", // => 4
+  "zxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx", // => 5
+  "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxz", // => 5
+
+
 ]
 console.time("#1")
 for (let item of items) {
