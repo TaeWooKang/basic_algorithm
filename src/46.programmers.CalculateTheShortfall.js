@@ -1,4 +1,4 @@
-//문제: https://programmers.co.kr/learn/courses/30/lessons/87389
+//문제: https://programmers.co.kr/learn/courses/30/lessons/82612
 
 function calculateTheShortfall (price, money, count) {
   let answer = money;
