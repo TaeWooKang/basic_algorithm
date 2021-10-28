@@ -1,4 +1,4 @@
-//문제: https://programmers.co.kr/learn/courses/30/lessons/12903
+//문제: https://programmers.co.kr/learn/courses/30/lessons/12906
 
 function hateSameNumber (arr) {
   return arr.filter((ar, index) => arr[index - 1] !== ar)
