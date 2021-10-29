@@ -1,4 +1,4 @@
-//문제: https://programmers.co.kr/learn/courses/30/lessons/12917
+//문제: https://programmers.co.kr/learn/courses/30/lessons/12918
 
 function stringHandlingBasics (s) {
   return (s.length === 4 || s.length === 6)
