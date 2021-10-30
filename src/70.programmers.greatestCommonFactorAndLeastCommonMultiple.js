@@ -1,4 +1,4 @@
-//문제: https://programmers.co.kr/learn/courses/30/lessons/12937?language=javascript
+//문제: https://programmers.co.kr/learn/courses/30/lessons/12940
 
 function greatestCommonFactorAndLeastCommonMultiple (n, m) {
   const gcd = getGcd(n, m)

@@ -1,4 +1,4 @@
-//문제: https://programmers.co.kr/learn/courses/30/lessons/12937?language=javascript
+//문제: https://programmers.co.kr/learn/courses/30/lessons/12944
 
 function average (arr) {
   return arr.reduce((acc, cur) => acc + cur, 0) / arr.length;
