@@ -4,7 +4,7 @@ function findDecimals (numbers) {
   const answer = new Set();
 
   getNumbers(numbers.split("")).forEach(temp => {
-    if (check(temp) && temp > 1) {
+    if (check(temp)) {
       answer.add(+temp)
     }
   })
