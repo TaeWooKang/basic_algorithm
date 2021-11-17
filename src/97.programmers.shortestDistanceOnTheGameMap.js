@@ -1,5 +1,4 @@
-// 문제: https://programmers.co.kr/learn/courses/30/lessons/42860
-// 해답: https://1coding.tistory.com/171
+// 문제: https://programmers.co.kr/learn/courses/30/lessons/1844
 
 function shortestDistanceOnTheGameMap (maps) {
   // 동, 서, 남, 북
