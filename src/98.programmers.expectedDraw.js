@@ -3,11 +3,9 @@
 function expectedDraw (n, a, b) {
   let answer = 0;
   while (a !== b) {
-    a = a % 2 !== 0 ? a + 1 : a
-    b = b % 2 !== 0 ? b + 1 : b
     answer++
-    a = parseInt(a / 2)
-    b = parseInt(b / 2)
+    a = Math.ceil(a / 2)
+    b = Math.ceil(b / 2)
   }
   return answer;
 }
