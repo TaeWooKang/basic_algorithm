@@ -1,7 +1,7 @@
 // 문제: https://programmers.co.kr/learn/courses/30/lessons/72412
 // 해답: https://velog.io/@sqaurelu/ALGO-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4-%ED%9B%84%EB%B3%B4%ED%82%A4%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-javascript
 
-function candidateKey (info, query) {
+function candidateKey (relation) {
   let answer = 0;
 
   let col = relation[0].length;
