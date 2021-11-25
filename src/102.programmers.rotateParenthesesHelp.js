@@ -2,14 +2,15 @@
 
 function rotateParenthesesHelp (s) {
   let answer = 0
+  let tryCount = 0
+  s = s.split("")
 
-  if (s.length % 2 === 0) {
-    s = s.split("")
-    for (let i = 0; i < s.length; i++) {
-      s.push(s.shift())
-      if (check(s)) {
-        answer++
-      }
+  while (tryCount < s.length) {
+    tryCount++
+
+    s.push(s.shift())
+    if (check(s)) {
+      answer++
     }
   }
 
@@ -19,13 +20,21 @@ function rotateParenthesesHelp (s) {
 function check (s) {
   const stringObject = { "}": "{", "]": "[", ")": "(" }
   const stack = []
-  for (const char of s) {
+  let tryCount = 0
+  while (tryCount < s.length) {
+    tryCount++
+
+    const char = s[tryCount - 1]
     if (!stringObject[char]) {
       stack.push(char)
-    } else if (stringObject[char] !== stack.pop()) {
+      continue
+    }
+
+    if (stringObject[char] !== stack.pop()) {
       return false
     }
   }
+
   return stack.length === 0
 }
 
