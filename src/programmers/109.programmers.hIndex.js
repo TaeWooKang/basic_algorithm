@@ -6,9 +6,10 @@ function hIndex (citations) {
   citations.sort((a, b) => b - a);
   for (let i = 0; i < citations.length; i++) {
     // f 가 위치 보다 크거나 같은 마지막 위치를 찾습니다
-    if (citations[i] <= i) {
-      answer = i
-      break;
+    if (citations[i] >= i + 1) {
+      answer++
+    } else {
+      break
     }
   }
 
@@ -20,7 +21,7 @@ const items = [
   [3, 0, 6, 1, 5], //= >	3
   [10, 8, 5, 4, 3], //= > 4
   [25, 8, 5, 3, 3], //= > 3
-
+  [2, 2] //= > 
 ]
 
 console.time("#1")
