@@ -1,4 +1,5 @@
 // 문제: https://programmers.co.kr/learn/courses/30/lessons/42747
+// 해답: https://en.wikipedia.org/wiki/H-index
 
 function hIndex (citations) {
   let answer = 0;
