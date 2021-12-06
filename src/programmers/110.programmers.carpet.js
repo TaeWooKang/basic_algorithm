@@ -3,18 +3,11 @@
 function carpet (brown, yellow) {
   let answer = [];
   const max = brown + yellow
-  for (let i = 1; i < max; i++) {
-    const left = i
-    const right = parseInt(max / i)
-    if (left * right === max
-      && left >= right
-      && (
-        (left) * (right - 2) === yellow
-        || (left - 2) * (right - 2) === yellow
-      )
-    ) {
-      answer.push(left)
+  for (let left = 1; left < max; left++) {
+    const right = max / left
+    if ((left - 2) * (right - 2) === yellow) {
       answer.push(right)
+      answer.push(left)
       break;
     }
   }
