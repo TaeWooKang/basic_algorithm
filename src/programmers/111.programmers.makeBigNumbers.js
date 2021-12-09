@@ -1,4 +1,4 @@
-// 문제: https://programmers.co.kr/learn/courses/30/lessons/42842
+// 문제: https://programmers.co.kr/learn/courses/30/lessons/42883
 // 해답: https://taesung1993.tistory.com/46
 
 function makeBigNumbers(number, k) {
