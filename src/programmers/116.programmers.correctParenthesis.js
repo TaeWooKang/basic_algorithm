@@ -1,21 +1,16 @@
 // 문제: https://programmers.co.kr/learn/courses/30/lessons/12909
 
 function correctParenthesis (s) {
-  const stack = []
-
-  if (s[0] !== "(" || s[s.length - 1] !== ")") {
-    return false
-  }
+  let answer = 0
 
   for (const char of s) {
-    if (char === "(") {
-      stack.push(char)
-    } else if (!stack.pop()) {
+    answer += char === "(" ? 1 : -1
+    if (answer === -1) {
       return false
     }
   }
 
-  return stack.length === 0;
+  return answer === 0;
 }
 
 const items = [
