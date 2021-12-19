@@ -4,6 +4,10 @@ function firstCash (cacheSize, cities) {
   let answer = 0;
   let searchArr = []
 
+  if (cacheSize === 0) {
+    return cities.length * 5
+  }
+
   for (const city of cities) {
     const lowerCity = city.toLowerCase()
     const searchIndex = searchArr.indexOf(lowerCity)
@@ -15,10 +19,10 @@ function firstCash (cacheSize, cities) {
     }
     answer += 5
     searchArr.push(lowerCity)
-    searchArr = searchArr.slice(
-      Math.max(searchArr.length - cacheSize, 0),
-      cacheSize + 1
-    )
+
+    if (searchArr.length > cacheSize) {
+      searchArr.shift()
+    }
   }
   return answer;
 }
