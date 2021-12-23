@@ -1,19 +1,17 @@
 // 문제: https://programmers.co.kr/learn/courses/30/lessons/12953
 
 function NLeastCommonMultiples (arr) {
-  let answer = Math.max(...arr);
+  let answer = Math.max(...arr)
 
   for (const num of arr) {
-    if (answer % num !== 0) {
-      for (let i = 1; i <= num; i++) {
-        if (answer * i % num === 0) {
-          answer = answer * i
-          break;
-        }
-      }
-    }
+    answer = answer * num / gcd(answer, num)
   }
-  return answer;
+
+  return answer
+}
+
+function gcd (a, b) {
+  return a % b ? gcd(b, a % b) : b
 }
 
 const items = [
