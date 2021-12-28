@@ -1,18 +1,16 @@
 // 문제: https://programmers.co.kr/learn/courses/30/lessons/12913
 
 function eatTheGround (land) {
-  for (let i = 0; i < land.length - 1; i++) {
-    for (let j = 0; j < 4; j++) {
-      let tempMax = land[i].reduce((acc, cur, index) => {
-        if (index !== j) {
-          acc = acc > cur ? acc : cur
-        }
-        return acc
-      }, 0)
-      land[i + 1][j] += tempMax
-    }
-  }
-  return Math.max(...land[land.length - 1])
+  return Math.max(
+    ...land.reduce((acc, cur) => {
+      return [
+        cur[0] += Math.max(acc[1], acc[2], acc[3]),
+        cur[1] += Math.max(acc[0], acc[2], acc[3]),
+        cur[2] += Math.max(acc[0], acc[1], acc[3]),
+        cur[3] += Math.max(acc[0], acc[1], acc[2]),
+      ]
+    }, [0, 0, 0, 0])
+  )
 }
 
 const items = [
