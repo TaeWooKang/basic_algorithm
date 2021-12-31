@@ -1,13 +1,10 @@
 // 문제: https://programmers.co.kr/learn/courses/30/lessons/12941
 
 function createAMinimum (A, B) {
-  let answer = 0;
   A.sort((a, b) => a - b)
   B.sort((a, b) => b - a)
 
-  answer = A.reduce((acc, cur, idx) => acc += (cur * B[idx]), answer)
-
-  return answer;
+  return A.reduce((acc, cur, idx) => acc += (cur * B[idx]), answer);
 
 }
 
