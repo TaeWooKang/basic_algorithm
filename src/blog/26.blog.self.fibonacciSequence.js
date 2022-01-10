@@ -1,4 +1,4 @@
-//문제: 
+//문제: https://im-developer.tistory.com/61?category=831367
 
 function fibonacciSequence (num, currentTotal = 0) {
   if (num <= 0) {
