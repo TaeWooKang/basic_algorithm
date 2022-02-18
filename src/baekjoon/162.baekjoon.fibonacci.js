@@ -1,4 +1,4 @@
-// 문제: https://www.acmicpc.net/problem/10872
+// 문제: https://www.acmicpc.net/problem/10870
 
 const readline = require('readline');
 
